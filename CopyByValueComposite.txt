@@ -1,0 +1,24 @@
+Copy by Values for Composite Data type:
+
+(1)With JSON.parse and JSON.Stringify
+
+eg: let a = [{1, 2, 6}, {23, 5,100}];
+
+let b = JSON.parse(JSON.stringify(a)); // copy by value
+
+
+(2) Object.assign()
+
+eg: for object let a = {23, 5, 100};
+     let b = Object.assign({}, a); // copy by value
+		 
+	eg: for array let m = [23, 5, 100];
+     let n = Object.assign([], m);	 // copy by value
+
+(3)Spread operator
+
+eg:  let k = [23, 5, 100];
+     let l = [...k];	 // copy by value
+
+
+

@@ -136,7 +136,9 @@ Parsing a list and transform the first and last elements of it:
 
 var arr = ["GUVI", "I", "am", "a geek"];
 function transformFirstAndLast(arr) {
- 
+        let newObject = {};
+            newObject[arr[0]] = arr[arr.length-1];
+        
  return newObject;
 }
 
@@ -147,10 +149,11 @@ Parsing a list of lists and convert into a JSON object:
 var arr = [["make", "Ford"], ["model", "Mustang"], ["year", 1964]];
 function fromListToObject(arr) {
  var newObject = {};
- 
+ for(let i in obj){
+    newObject[arr[i][0]] = arr[i][1];  
+  }
  return newObject;
 }
-
 /*
 Problem 6 (10 mins):
 Parsing a list of lists and convert into a JSON object:

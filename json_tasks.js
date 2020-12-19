@@ -121,13 +121,14 @@ Parsing an JSON object and convert it to a list:
 */
 
 var obj = {name: "ISRO", age: 35, role: "Scientist"};
+let isroList =[];
 function convertListToObject(obj) {
- // your code here
-}var obj = {name: "ISRO", age: 35, role: "Scientist"};
-function convertListToObject(obj) {
- // your code here
+    for(let i in obj){
+    isroList.push(obj[i]);
+    }
+  return isroList;
 }
-
+convertListToObject(obj);
 /*
 Problem 4( 5 mins):
 Parsing a list and transform the first and last elements of it:

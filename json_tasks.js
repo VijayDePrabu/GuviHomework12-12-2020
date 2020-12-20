@@ -211,7 +211,6 @@ var securityQuestions = [
    var status = chksecurityQuestions(securityQuestions, ques, ans);
    console.log(status); // flase
 
-   
    /*
    Problem 9(20 mins):
 Parsing JSON objects and Compare:
@@ -227,5 +226,13 @@ var students = [
     ];
    function returnMinors(arr)
    {
+       let minorArr = [];
+
+       for(let i in arr){
+           if(parseInt(arr[i].age) < 18){
+               minorArr.push(arr[i]);
+           }
+       }
+       return minorArr;
    }
-  // console.log(returnMinors(students));
+   console.log(returnMinors(students));
